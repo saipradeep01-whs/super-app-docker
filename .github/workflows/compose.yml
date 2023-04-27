@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world!"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Build the docker-compose stack 
+        run: docker-compose up
+      
